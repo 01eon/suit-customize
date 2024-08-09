@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>E-Tahi - Customize Suits</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../css/landingpage.css" />
+    <link rel="stylesheet" href="../css/customize.css" />
+
+    <!-- Bootstrap CDN v5.3.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap Icons CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+      integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e"
+      crossorigin="anonymous"
+    />
+
+    <!-- Font Awesome Kit -->
+    <script
+      src="https://kit.fontawesome.com/b948311deb.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="customization row" id="customizationSystem">
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 garments-container">
+        <div class="garments">
+          <button class="optGarment active" id="garmentSuit">
+            <img
+              src="../img/icon/suit-icon-color.png"
+              id="iconSuit"
+              class="icon"
+            />
+            <strong>Suit</strong>
+          </button>
+          <button class="optGarment" id="garmentPants">
+            <img
+              src="../img/icon/formalpants-icon.png"
+              id="iconPants"
+              class="icon"
+            />
+            <strong>Pants</strong>
+          </button>
+          <button class="optGarment" id="garmentNecktie" hidden>
+            <img
+              src="../img/icon/necktie-icon.png"
+              id="iconNecktie"
+              class="icon"
+            />
+            <strong>Necktie</strong>
+          </button>
+          <button class="optGarment" id="garmentBowtie">
+            <img
+              src="../img/icon/bowtie-icon.png"
+              id="iconBowtie"
+              class="icon"
+            />
+            <strong>Bow Tie</strong>
+          </button>
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 containers">
+        <div id="containerSuit" class="mask-container-suit">
+          <!-- Tuxedo Mask -->
+          <div class="tuxedoMask-container" id="containerTuxedo">
+            <div class="mask-tuxedo" id="tuxedo">
+              <img src="../img/Tuxedo/tuxedo_real3.png" class="tuxedo-sample" />
+            </div>
+            <div class="mask-tuxedo-inner" id="tuxedoInner">
+              <img src="../img/Tuxedo/tuxedo_inner.png" class="tuxedo-inner" />
+            </div>
+            <div class="mask-tuxedo-blazer" id="tuxedoBlazer">
+              <img
+                src="../img/Tuxedo/tuxedo_blazer2.png"
+                class="tuxedo-blazer"
+              />
+            </div>
+            <div class="mask-tuxedo-mannequin">
+              <img
+                src="../img/Tuxedo/tuxedo_mannequin.png"
+                class="tuxedo-mannequin"
+              />
+            </div>
+            <div class="mask-tuxedo-chalk-stripe" id="tuxedoChalkStripe" hidden>
+              <img
+                src="../img/Tuxedo/tuxedo-chalk-stripe.png"
+                class="tuxedo-chalk-stripe"
+              />
+            </div>
+            <div class="mask-tuxedo-windowpane" id="tuxedoWindowpane" hidden>
+              <img
+                src="../img/Tuxedo/tuxedo-windowpane.png"
+                class="tuxedo-windowpane"
+              />
+            </div>
+          </div>
+
+          <!-- Corporate Mask -->
+          <div class="corporateMask-container" id="containerCorporate" hidden>
+            <div class="mask-corporate" id="corporate">
+              <img
+                src="../img/Corporate/corporate_real.png"
+                class="corporate-sample"
+              />
+            </div>
+
+            <div class="mask-corporate-inner" id="corporateInner">
+              <img
+                src="../img/Corporate/corporate_long_sleeve.png"
+                class="corporate-inner"
+              />
+            </div>
+
+            <div class="mask-corporate-button" id="corporateButton">
+              <img
+                src="../img/Corporate/corporate_button.png"
+                class="corporate-button"
+              />
+            </div>
+
+            <div class="mask-corporate-mannequin">
+              <img
+                src="../img/Corporate/corporate-mannequinn.png"
+                class="corporate-mannequin"
+              />
+            </div>
+
+            <div
+              class="mask-corporate-chalk-stripe"
+              id="corporateChalkStripe"
+              hidden
+            >
+              <img
+                src="../img/Corporate/corporate-chalk-stripe.png"
+                class="corporate-chalk-stripe"
+              />
+            </div>
+
+            <div
+              class="mask-corporate-windowpane"
+              id="corporateWindowpane"
+              hidden
+            >
+              <img
+                src="../img/Corporate/corporate-windowpane.png"
+                class="corporate-windowpane"
+              />
+            </div>
+          </div>
+
+          <!-- Formal Mask -->
+          <div class="formalMask-container" id="containerFormal" hidden>
+            <div class="mask-formal" id="formal">
+              <img src="../img/Formal/formal_real.png" class="formal-sample" />
+            </div>
+            <div class="mask-formal-inner" id="formalInner">
+              <img src="../img/Formal/formal_inner.png" class="formal-inner" />
+            </div>
+            <div class="mask-formal-button" id="formalButton">
+              <img
+                src="../img/Formal/formal_button.png"
+                class="formal-button"
+              />
+            </div>
+            <div class="mask-formal-mannequin">
+              <img
+                src="../img/Formal/formal_mannequin.png"
+                class="formal-mannequin"
+              />
+            </div>
+            <div class="mask-formal-chalk-stripe" id="formalChalkStripe" hidden>
+              <img
+                src="../img/Formal/formal-chalk-stripe.png"
+                class="formal-chalk-stripe"
+              />
+            </div>
+            <div class="mask-formal-windowpane" id="formalWindowpane" hidden>
+              <img
+                src="../img/Formal/formal-windowpane.png"
+                class="formal-windowpane"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Pants Mask -->
+        <div id="containerPants" class="mask-container-pants" hidden>
+          <div class="pantsMask-container" id="containerPants">
+            <div class="mask-pants" id="pants">
+              <img src="../img/Pants/pants-real.png" class="pants-sample" />
+            </div>
+
+            <div class="mask-pants-chalk-stripe" id="pantsChalkStripe" hidden>
+              <img
+                src="../img/Pants/pants-chalk-stripe.png"
+                class="pants-chalk-stripe"
+              />
+            </div>
+
+            <div class="mask-pants-windowpane" id="pantsWindowpane" hidden>
+              <img
+                src="../img/Pants/pants-windowpane.png"
+                class="pants-windowpane"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Necktie Mask -->
+        <div id="containerNecktie" class="mask-container-necktie" hidden>
+          <div class="necktieMask-container" id="containerNecktie">
+            <div class="mask-necktie" id="necktie">
+              <img
+                src="../img/Necktie/necktie-real.png"
+                class="necktie-sample"
+              />
+            </div>
+
+            <div
+              class="mask-necktie-chalk-stripe"
+              id="necktieChalkStripe"
+              hidden
+            >
+              <img
+                src="../img/Necktie/necktie-chalk-stripe.png"
+                class="necktie-chalk-stripe"
+              />
+            </div>
+
+            <div class="mask-necktie-windowpane" id="necktieWindowpane" hidden>
+              <img
+                src="../img/Necktie/necktie-windowpane.png"
+                class="necktie-windowpane"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Bowtie Mask -->
+        <div id="containerBowtie" class="mask-container-bowtie" hidden>
+          <div class="bowtieMask-container" id="containerBowtie">
+            <div class="mask-bowtie" id="bowtie">
+              <img src="../img/Bowtie/bowtie-real.png" class="bowtie-sample" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 properties-container">
+        <!-- Suit Properties -->
+        <div class="suit-properties" id="containerSuitProperties">
+          <div class="row optOccasion-container">
+            <div class="optOccasion">
+              <button class="btnOccasion active" id="occTuxedo">
+                <img
+                  src="../img/icon/tuxedo-icon-color.png"
+                  id="occTuxedoIcon"
+                  class="icon"
+                />
+                <strong>Tuxedo</strong>
+              </button>
+              <button class="btnOccasion" id="occCorporate">
+                <img
+                  src="../img/icon/corporate-icon.png"
+                  id="occCorporateIcon"
+                  class="icon"
+                />
+                <strong>Corporate</strong>
+              </button>
+              <button class="btnOccasion" id="occFormal">
+                <img
+                  src="../img/icon/formal-icon.png"
+                  id="occFormalIcon"
+                  class="icon"
+                />
+                <strong>Formal</strong>
+              </button>
+            </div>
+          </div>
+
+          <div class="opt">
+            <table class="table">
+              <tr>
+                <td class="table-head">Suit Color</td>
+                <td class="table-input">
+                  <input
+                    type="color"
+                    class="color-picker"
+                    id="suitColorPicker"
+                  />
+                </td>
+                <td class="table-read"><input type="text" id="suitHex" /></td>
+              </tr>
+              <tr>
+                <td class="table-head">Long Sleeve Color</td>
+                <td class="table-input">
+                  <input
+                    type="color"
+                    class="color-picker"
+                    id="sleeveColorPicker"
+                  />
+                </td>
+                <td class="table-read"><input type="text" id="sleeveHex" /></td>
+              </tr>
+              <tr>
+                <td class="table-head">Pattern</td>
+                <td class="table-read" colspan="2">
+                  <select id="suitPatternSelect">
+                    <option value="none">None</option>
+                    <option value="chalk-stripe">Chalk Stripe</option>
+                    <option value="windowpane">Windowpane</option>
+                  </select>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- Pants Properties -->
+        <div class="pants-properties" id="containerPantsProperties" hidden>
+          <div class="opt">
+            <table class="table">
+              <tr>
+                <td class="table-head">Pants Color</td>
+                <td class="table-input">
+                  <input
+                    type="color"
+                    class="color-picker"
+                    id="pantsColorPicker"
+                  />
+                </td>
+                <td class="table-read"><input type="text" id="pantsHex" /></td>
+              </tr>
+              <tr>
+                <td class="table-head">Pattern</td>
+                <td class="table-read" colspan="2">
+                  <select id="pantsPatternSelect">
+                    <option value="none">None</option>
+                    <option value="chalk-stripe">Chalk Stripe</option>
+                    <option value="windowpane">Windowpane</option>
+                  </select>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- Necktie Properties -->
+        <div class="necktie-properties" id="containerNecktieProperties" hidden>
+          <div class="opt">
+            <table class="table">
+              <tr>
+                <td class="table-head">Necktie Color</td>
+                <td class="table-input">
+                  <input
+                    type="color"
+                    class="color-picker"
+                    id="necktieColorPicker"
+                  />
+                </td>
+                <td class="table-read">
+                  <input type="text" id="necktieHex" />
+                </td>
+              </tr>
+              <tr>
+                <td class="table-head">Pattern</td>
+                <td class="table-read" colspan="2">
+                  <select id="necktiePatternSelect">
+                    <option value="none">None</option>
+                    <option value="chalk-stripe">Chalk Stripe</option>
+                    <option value="windowpane">Windowpane</option>
+                  </select>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- Bowtie Properties -->
+        <div class="bowtie-properties" id="containerBowtieProperties" hidden>
+          <div class="opt">
+            <table class="table">
+              <tr>
+                <td class="table-head">Bowtie Color</td>
+                <td class="table-input">
+                  <input
+                    type="color"
+                    class="color-picker"
+                    id="bowtieColorPicker"
+                  />
+                </td>
+                <td class="table-read"><input type="text" id="bowtieHex" /></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/index.js" asynch defer></script>
+  </body>
+</html>
