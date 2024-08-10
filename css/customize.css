@@ -1,6 +1,6 @@
 
 body{
-    /* overflow: hidden; */
+    overflow: hidden;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -48,10 +48,10 @@ body{
             Suit Containers
   =============================== */
   
-  .containers{
+  /* .containers{
     display: flex;
     flex-direction: column;
-  }
+  } */
   
   .mask-container-suit,
   .mask-container-pants,
