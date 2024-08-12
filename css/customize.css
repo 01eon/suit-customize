@@ -1,770 +1,768 @@
 
 body{
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    background-color: transparent;
-  }
-  
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  /* background-color: transparent; */
+  background-image: url('../img/background-transp.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.customization{
+  margin: 5rem;
+  padding: 10px;
+  height: 100vh;
+  align-items: center;
+}
+
+/* ==============================
+            Options
+=============================== */
+
+.garments-container .garments{
+  background-color: #fefefe;
+}
+
+.garments-container .garments .active{
+  background-color: transparent;
+}
+
+.garments-container .garments .optGarment{
+  background-color: #dbdbdb;
+  border: none;
+  outline: none;
+}
+
+
+.garments-container .garments .optGarment .icon{
+  filter: drop-shadow(0px 0px 1px #0e0e0e);
+}
+
+
+
+/* ==============================
+          Suit Containers
+=============================== */
+
+.containers{
+  display: flex;
+  flex-direction: column;
+}
+
+.mask-container-suit,
+.mask-container-pants,
+.mask-container-bowtie,
+.mask-container-necktie{
+  height: inherit;
+  /* width: inherit; */
+}
+
+.tuxedoMask-container, 
+.corporateMask-container, 
+.formalMask-container,
+.pantsMask-container,
+.bowtieMask-container,
+.necktieMask-container{
+  position: relative;
+  height: inherit;
+  /* width: inherit; */
+  filter: drop-shadow(0px 7px 3px #0e0e0e);
+}
+
+
+/* ==============================
+              Tuxedo 
+=============================== */
+
+.tuxedoMask-container > :is(
+  .mask-tuxedo, 
+  .mask-tuxedo-inner, 
+  .mask-tuxedo-blazer, 
+  .mask-tuxedo-mannequin, 
+  .mask-tuxedo-chalk-stripe,
+  .mask-tuxedo-windowpane),
+.corporateMask-container > :is(
+  .mask-corporate, 
+  .mask-corporate-inner, 
+  .mask-corporate-button, 
+  .mask-corporate-mannequin,
+  .mask-corporate-chalk-stripe,
+  .mask-corporate-windowpane),
+.formalMask-container > :is(
+  .mask-formal, 
+  .mask-formal-inner, 
+  .mask-formal-button, 
+  .mask-formal-mannequin,
+  .mask-formal-chalk-stripe,
+  .mask-formal-windowpane),
+.pantsMask-container > :is(
+  .mask-pants, 
+  .mask-pants-chalk-stripe,
+  .mask-pants-windowpane),
+.necktieMask-container > :is(
+  .mask-necktie,
+  .mask-necktie-chalk-stripe,
+  .mask-necktie-windowpane),
+.bowtieMask-container > :is(
+  .mask-bowtie){
+  position: absolute;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.tuxedoMask-container .mask-tuxedo{
+  -webkit-mask-image: url(../img/Tuxedo/tuxedo_sample3.png);
+  mask-image: url(../img/Tuxedo/tuxedo_sample3.png);
+  background-color: #000000;
+}
+
+.tuxedoMask-container .mask-tuxedo-blazer{
+  margin-top: -1px;
+}
+
+.tuxedoMask-container .mask-tuxedo-inner{
+  -webkit-mask-image: url(../img/Tuxedo/tuxedo_inner.png);
+  mask-image: url(../img/Tuxedo/tuxedo_inner.png);
+  background-color: #ffffff;
+}
+
+.tuxedoMask-container .mask-tuxedo-chalk-stripe{
+  -webkit-mask-image: url(../img/Tuxedo/tuxedo-chalk-stripe.png);
+  mask-image: url(../img/Tuxedo/tuxedo-chalk-stripe.png);
+  background-color: rgb(255, 255, 255);
+  filter: opacity(0.5);
+}
+
+.tuxedoMask-container .mask-tuxedo-windowpane{
+  -webkit-mask-image: url(../img/Tuxedo/tuxedo-windowpane.png);
+  mask-image: url(../img/Tuxedo/tuxedo-windowpane.png);
+  background-color: rgb(255, 255, 255);
+  filter: opacity(0.2);
+}
+
+/* .tuxedo-sample, .tuxedo-blazer, .tuxedo-inner, .tuxedo-mannequin, .tuxedo-chalk-stripe, .tuxedo-windowpane,
+.corporate-sample, .corporate-inner, .corporate-button, .corporate-mannequin, .corporate-chalk-stripe, .corporate-windowpane,
+.formal-sample, .formal-inner, .formal-button, .formal-mannequin, .formal-chalk-stripe, .formal-windowpane,
+.pants-sample, .pants-chalk-stripe, .pants-windowpane,
+.necktie-sample, .necktie-chalk-stripe, .necktie-windowpane,
+.bowtie-sample{
+  width: 100%;
+} */
+
+.tuxedo-sample{
+  filter: opacity(0.3) brightness(100%) contrast(200%);
+}
+
+.tuxedo-inner{
+  filter: opacity(0.5) brightness(80%) contrast(200%);
+}
+
+
+
+/* ==============================
+            Corporate
+=============================== */
+.corporateMask-container .mask-corporate{
+  -webkit-mask-image: url(../img/Corporate/corproate_sample.png);
+  mask-image: url(../img/Corporate/corproate_sample.png);
+  background-color: #000000;
+}
+
+.corporateMask-container .mask-corporate-button{
+  -webkit-mask-image: url(../img/Corporate/corporate_button_sample.png);
+  mask-image: url(../img/Corporate/corporate_button_sample.png);
+  background-color: #000000;
+}
+
+.corporateMask-container .mask-corporate-inner{
+  -webkit-mask-image: url(../img/Corporate/corporate_long_sleeve_sample.png);
+  mask-image: url(../img/Corporate/corporate_long_sleeve_sample.png);
+  background-color: #ffffff;
+}
+
+.corporateMask-container .mask-corporate-chalk-stripe{
+  -webkit-mask-image: url(../img/Corporate/corporate-chalk-stripe.png);
+  mask-image: url(../img/Corporate/corporate-chalk-stripe.png);
+  background-color: rgb(255, 255, 255);
+  filter: opacity(0.5);
+}
+
+.corporateMask-container .mask-corporate-windowpane{
+  -webkit-mask-image: url(../img/Corporate/corporate-windowpane.png);
+  mask-image: url(../img/Corporate/corporate-windowpane.png);
+  background-color: rgb(255, 255, 255);
+  filter: opacity(0.2);
+}
+
+.corporate-sample{
+  filter: opacity(0.4) brightness(80%) contrast(100%);
+}
+
+.corporate-button{
+  filter: opacity(0.3) brightness(40%) contrast(60%);
+}
+
+.corporate-inner{
+  filter: opacity(0.3) brightness(80%) contrast(100%);
+}
+
+
+/* ==============================
+            Formal
+=============================== */
+
+
+.formalMask-container .mask-formal{
+  -webkit-mask-image: url(../img/Formal/formal_sample.png);
+  mask-image: url(../img/Formal/formal_sample.png);
+  background-color: #000000;
+}
+
+.formalMask-container .mask-formal-inner{
+  -webkit-mask-image: url(../img/Formal/formal_inner_sample.png);
+  mask-image: url(../img/Formal/formal_inner_sample.png);
+  background-color: #ffffff;
+}
+
+.formalMask-container .mask-formal-button{
+  -webkit-mask-image: url(../img/Formal/formal_button_sample.png);
+  mask-image: url(../img/Formal/formal_button_sample.png);
+  background-color: #000000;
+}
+
+.formalMask-container .mask-formal-chalk-stripe{
+  -webkit-mask-image: url(../img/Formal/formal-chalk-stripe.png);
+  mask-image: url(../img/Formal/formal-chalk-stripe.png);
+  background-color: #ffffff;
+  filter: opacity(0.5);
+}
+
+.formalMask-container .mask-formal-windowpane{
+  -webkit-mask-image: url(../img/Formal/formal-windowpane.png);
+  mask-image: url(../img/Formal/formal-windowpane.png);
+  background-color: rgb(255, 255, 255);
+  filter: opacity(0.2);
+}
+
+.formal-sample{
+  filter: opacity(0.3) brightness(100%) contrast(80%);
+}
+
+.formal-inner{
+  filter: opacity(0.3) brightness(100%) contrast(120%);
+}
+
+.formal-button{
+  filter: opacity(0.3) brightness(40%) contrast(80%);
+}
+
+.formal-mannequin{
+  margin-top: 5px;
+}
+
+
+
+/* ==============================
+            Pants
+=============================== */
+
+.pantsMask-container .mask-pants{
+  -webkit-mask-image: url(../img/Pants/pants-sample.png);
+  mask-image: url(../img/Pants/pants-sample.png);
+  background-color: #000000;
+}
+
+.pantsMask-container .mask-pants-chalk-stripe{
+  -webkit-mask-image: url(../img/Pants/pants-chalk-stripe.png);
+  mask-image: url(../img/Pants/pants-chalk-stripe.png);
+  background-color: #ffffff;
+  filter: opacity(0.5);
+}
+
+.pantsMask-container .mask-pants-windowpane{
+  -webkit-mask-image: url(../img/Pants/pants-windowpane.png);
+  mask-image: url(../img/Pants/pants-windowpane.png);
+  background-color: rgb(255, 255, 255);
+  filter: opacity(0.2);
+}
+
+
+.pants-sample,
+.pants-chalk-stripe,
+.pants-windowpane{
+  filter: opacity(0.3) brightness(100%) contrast(80%);
+}
+
+/* ==============================
+            Necktie
+=============================== */
+
+.necktieMask-container .mask-necktie{
+  -webkit-mask-image: url(../img/Necktie/necktie-sample.png);
+  mask-image: url(../img/Necktie/necktie-sample.png);
+  background-color: #000000;
+}
+
+.necktieMask-container .mask-necktie-chalk-stripe{
+  -webkit-mask-image: url(../img/Necktie/necktie-chalk-stripe.png);
+  mask-image: url(../img/Necktie/necktie-chalk-stripe.png);
+  background-color: #ffffff;
+  filter: opacity(0.5);
+}
+
+.necktieMask-container .mask-necktie-windowpane{
+  -webkit-mask-image: url(../img/Necktie/necktie-windowpane.png);
+  mask-image: url(../img/Necktie/necktie-windowpane.png);
+  background-color: rgb(255, 255, 255);
+  filter: opacity(0.5);
+}
+
+.necktie-sample, .necktie-chalk-stripe, .necktie-windowpane,
+.bowtie-sample{
+  filter: opacity(0.3) brightness(100%) contrast(80%);
+}
+
+
+
+/* ==============================
+            Bowtie
+=============================== */
+
+.bowtieMask-container .mask-bowtie{
+  -webkit-mask-image: url(../img/Bowtie/bowtie-sample.png);
+  mask-image: url(../img/Bowtie/bowtie-sample.png);
+  background-color: #000000;
+}
+
+/* ==============================
+        Cloth Properties
+=============================== */
+.properties-container{
+  display: flex;
+  justify-content: center;
+}
+
+.suit-properties, 
+.pants-properties, 
+.necktie-properties, 
+.bowtie-properties{
+  /* height: 100%; */
+  /* height: 100vh; */
+  padding-top: 10px;
+}
+
+
+
+/* ==============================
+            Options
+=============================== */
+.optOccasion-container{
+  background-color: #afafaf;
+  border-radius: 1rem;
+}
+
+.optOccasion{
+  /* display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center; */
+  display: inline-flex;
+  justify-content: center;
+  /* margin: 1.5rem auto; */
+}
+
+
+
+
+.optOccasion .btnOccasion{
+  border-radius: 1rem;
+  background-color: transparent;
+  box-shadow: 5px 5px 5px #0e0e0e;
+}
+
+.optOccasion .active{
+  background-color: #fefefe;
+  box-shadow: none;
+}
+
+.optOccasion .btnOccasion .icon{
+  filter: drop-shadow(0px 0px 1px #0e0e0e);
+}
+
+.reviewBtn{
+  padding: 0.7rem 1.2rem;
+  border-radius: 1rem;
+}
+
+
+
+/* ==============================
+            Color Table
+=============================== */
+.table-input{
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.table .table-input{
+  text-align: center;
+}
+
+.table .table-input .color-picker{
+  margin-right:.2em;
+  cursor: pointer;
+  width: 150px;
+  outline: none;
+  background: transparent;
+  border: transparent;
+}
+
+/* ==============================
+            Review
+=============================== */
+.reviewContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.review-title{
+  text-align: center;
+}
+
+.reviewContainer .review-card{
+  margin: auto 0.5rem;
+  width: 450px;
+  height: 300px;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #fefefe;
+  box-shadow: 7px 7px 7px 7px #3f3f3f8a;
+}
+
+.read-text{
+  outline: none;
+  border: none;
+  background-color: none;
+}
+
+
+/* ==============================
+          Form Buttons
+=============================== */
+.button-container{
+  display: flex;
+  justify-content: center;
+}
+
+.button-container > :is(.returnBtn, .purchaseBtn), .reviewBtn{
+  margin: auto 0.5rem;
+  padding: 0.7rem 1.2rem;
+  border: 1px solid #fefefe;
+  border-radius: 1rem;
+  text-decoration: none;
+  color: #fefefe;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 2px #0e0e0e;
+}
+
+.button-container .returnBtn, .reviewBtn{
+  background-color: #0e0e0e;
+}
+
+.button-container .purchaseBtn{
+  background-color: #000c50;
+}
+
+.price-container{
+  background-color: #2222222a;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.price-container .price-tag{
+  outline: none;
+  background-color: transparent;
+  border: transparent;
+  font-weight: 600;
+}
+
+/* ==============================
+          Media Queries
+=============================== */
+
+/* XS */
+@media(min-width: 0px){
   .customization{
-    margin: 5rem;
-    padding: 10px;
-    height: 100vh;
-    align-items: center;
+    margin-bottom: 29rem;
   }
-  
-  /* ==============================
-              Options
-  =============================== */
-  
-  .garments-container .garments{
-    background-color: #fefefe;
-  }
-  
-  .garments-container .garments .active{
-    background-color: transparent;
-  }
-  
+
+  .garments-container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 1.5rem;
+      border: 3px solid #b1b1b1;
+  } 
+
+
   .garments-container .garments .optGarment{
-    background-color: #dbdbdb;
-    border: none;
-    outline: none;
+      margin: auto;
+      height: 150px;
+      width: 130px;
   }
   
-  
-  
-  
-  
-  
-  
+  .garments-container .garments .optGarment:first-child{
+      border-top-left-radius: 1.5rem;
+      border-bottom-left-radius: 1.5rem;
+      border-top-right-radius: 0rem;
+      border-bottom-right-radius: 0rem;
+  }
+      
+  .garments-container .garments .optGarment:last-child{
+      border-top-left-radius: 0rem;
+      border-bottom-left-radius: 0rem;
+      border-top-right-radius: 1.5rem;
+      border-bottom-right-radius: 1.5rem;
+  }
+
   .garments-container .garments .optGarment .icon{
-    filter: drop-shadow(0px 0px 1px #0e0e0e);
+      width: 100px;
   }
-  
-  
-  
-  /* ==============================
-            Suit Containers
-  =============================== */
-  
-  /* .containers{
-    display: flex;
-    flex-direction: column;
-  } */
-  
-  .mask-container-suit,
-  .mask-container-pants,
-  .mask-container-bowtie,
-  .mask-container-necktie{
-    height: inherit;
-    /* width: inherit; */
+
+  .containers{
+      height: 541px;
+      align-self: baseline;
   }
-  
-  .tuxedoMask-container, 
-  .corporateMask-container, 
-  .formalMask-container,
-  .pantsMask-container,
-  .bowtieMask-container,
-  .necktieMask-container{
-    position: relative;
-    height: inherit;
-    /* width: inherit; */
-    filter: drop-shadow(0px 7px 3px #0e0e0e);
-  }
-  
-  
-  /* ==============================
-                Tuxedo 
-  =============================== */
-  
+
   .tuxedoMask-container > :is(
-    .mask-tuxedo, 
-    .mask-tuxedo-inner, 
-    .mask-tuxedo-blazer, 
-    .mask-tuxedo-mannequin, 
-    .mask-tuxedo-chalk-stripe,
-    .mask-tuxedo-windowpane),
+  .mask-tuxedo, 
+  .mask-tuxedo-inner, 
+  .mask-tuxedo-blazer, 
+  .mask-tuxedo-mannequin, 
+  .mask-tuxedo-chalk-stripe,
+  .mask-tuxedo-windowpane),
   .corporateMask-container > :is(
-    .mask-corporate, 
-    .mask-corporate-inner, 
-    .mask-corporate-button, 
-    .mask-corporate-mannequin,
-    .mask-corporate-chalk-stripe,
-    .mask-corporate-windowpane),
+  .mask-corporate, 
+  .mask-corporate-inner, 
+  .mask-corporate-button, 
+  .mask-corporate-mannequin,
+  .mask-corporate-chalk-stripe,
+  .mask-corporate-windowpane),
   .formalMask-container > :is(
-    .mask-formal, 
-    .mask-formal-inner, 
-    .mask-formal-button, 
-    .mask-formal-mannequin,
-    .mask-formal-chalk-stripe,
-    .mask-formal-windowpane),
+  .mask-formal, 
+  .mask-formal-inner, 
+  .mask-formal-button, 
+  .mask-formal-mannequin,
+  .mask-formal-chalk-stripe,
+  .mask-formal-windowpane),
   .pantsMask-container > :is(
-    .mask-pants, 
-    .mask-pants-chalk-stripe,
-    .mask-pants-windowpane),
+  .mask-pants, 
+  .mask-pants-chalk-stripe,
+  .mask-pants-windowpane),
   .necktieMask-container > :is(
-    .mask-necktie,
-    .mask-necktie-chalk-stripe,
-    .mask-necktie-windowpane),
+  .mask-necktie,
+  .mask-necktie-chalk-stripe,
+  .mask-necktie-windowpane),
   .bowtieMask-container > :is(
-    .mask-bowtie){
-    position: absolute;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
+  .mask-bowtie){
+      -webkit-mask-size: 100%;
   }
-  
-  .tuxedoMask-container .mask-tuxedo{
-    -webkit-mask-image: url(../img/Tuxedo/tuxedo_sample3.png);
-    mask-image: url(../img/Tuxedo/tuxedo_sample3.png);
-    background-color: #000000;
-  }
-  
-  .tuxedoMask-container .mask-tuxedo-blazer{
-    margin-top: -1px;
-  }
-  
-  .tuxedoMask-container .mask-tuxedo-inner{
-    -webkit-mask-image: url(../img/Tuxedo/tuxedo_inner.png);
-    mask-image: url(../img/Tuxedo/tuxedo_inner.png);
-    background-color: #ffffff;
-  }
-  
-  .tuxedoMask-container .mask-tuxedo-chalk-stripe{
-    -webkit-mask-image: url(../img/Tuxedo/tuxedo-chalk-stripe.png);
-    mask-image: url(../img/Tuxedo/tuxedo-chalk-stripe.png);
-    background-color: rgb(255, 255, 255);
-    filter: opacity(0.5);
-  }
-  
-  .tuxedoMask-container .mask-tuxedo-windowpane{
-    -webkit-mask-image: url(../img/Tuxedo/tuxedo-windowpane.png);
-    mask-image: url(../img/Tuxedo/tuxedo-windowpane.png);
-    background-color: rgb(255, 255, 255);
-    filter: opacity(0.2);
-  }
-  
-  /* .tuxedo-sample, .tuxedo-blazer, .tuxedo-inner, .tuxedo-mannequin, .tuxedo-chalk-stripe, .tuxedo-windowpane,
+
+  .tuxedo-sample, .tuxedo-blazer, .tuxedo-inner, .tuxedo-mannequin, .tuxedo-chalk-stripe, .tuxedo-windowpane,
   .corporate-sample, .corporate-inner, .corporate-button, .corporate-mannequin, .corporate-chalk-stripe, .corporate-windowpane,
   .formal-sample, .formal-inner, .formal-button, .formal-mannequin, .formal-chalk-stripe, .formal-windowpane,
   .pants-sample, .pants-chalk-stripe, .pants-windowpane,
   .necktie-sample, .necktie-chalk-stripe, .necktie-windowpane,
   .bowtie-sample{
-    width: 100%;
-  } */
-  
-  .tuxedo-sample{
-    filter: opacity(0.3) brightness(100%) contrast(200%);
+      width: 100%;
   }
-  
-  .tuxedo-inner{
-    filter: opacity(0.5) brightness(80%) contrast(200%);
+
+  .properties-container{
+      padding: 5rem auto;
   }
-  
-  
-  
-  /* ==============================
-              Corporate
-  =============================== */
-  .corporateMask-container .mask-corporate{
-    -webkit-mask-image: url(../img/Corporate/corproate_sample.png);
-    mask-image: url(../img/Corporate/corproate_sample.png);
-    background-color: #000000;
+
+  .optOccasion .active{
+      background-color: #fefefe;
+      box-shadow: none;
+    }
+
+  .optOccasion .btnOccasion{
+      margin: 2rem 0rem;
+      padding: 3rem auto;
   }
-  
-  .corporateMask-container .mask-corporate-button{
-    -webkit-mask-image: url(../img/Corporate/corporate_button_sample.png);
-    mask-image: url(../img/Corporate/corporate_button_sample.png);
-    background-color: #000000;
+
+  .optOccasion .btnOccasion .icon{
+      width: 135px;
   }
-  
-  .corporateMask-container .mask-corporate-inner{
-    -webkit-mask-image: url(../img/Corporate/corporate_long_sleeve_sample.png);
-    mask-image: url(../img/Corporate/corporate_long_sleeve_sample.png);
-    background-color: #ffffff;
+
+
+}
+
+/* SM */
+@media(min-width: 576px){
+  .customization{
+    margin-bottom: 0rem;
   }
-  
-  .corporateMask-container .mask-corporate-chalk-stripe{
-    -webkit-mask-image: url(../img/Corporate/corporate-chalk-stripe.png);
-    mask-image: url(../img/Corporate/corporate-chalk-stripe.png);
-    background-color: rgb(255, 255, 255);
-    filter: opacity(0.5);
+
+  .garments-container{
+      border-radius: 0rem;
+      border-top-right-radius: 1.5rem;
+      border-bottom-right-radius: 1.5rem;
+      /* margin-left: 40px; */
   }
-  
-  .corporateMask-container .mask-corporate-windowpane{
-    -webkit-mask-image: url(../img/Corporate/corporate-windowpane.png);
-    mask-image: url(../img/Corporate/corporate-windowpane.png);
-    background-color: rgb(255, 255, 255);
-    filter: opacity(0.2);
+
+  .garments-container .garments{
+      margin-left: 45px;
+      width: 125px;
+      height: 450px;
   }
-  
-  .corporate-sample{
-    filter: opacity(0.4) brightness(80%) contrast(100%);
+
+  .garments-container .garments .optGarment{
+      margin: auto;
+      width: 80px;
   }
-  
-  .corporate-button{
-    filter: opacity(0.3) brightness(40%) contrast(60%);
+
+  .garments-container .garments .optGarment .icon{
+      width: 60px;
   }
-  
-  .corporate-inner{
-    filter: opacity(0.3) brightness(80%) contrast(100%);
+
+  .containers{
+      height: 251px;
+      align-self: auto;
   }
-  
-  
-  /* ==============================
-              Formal
-  =============================== */
-  
-  
-  .formalMask-container .mask-formal{
-    -webkit-mask-image: url(../img/Formal/formal_sample.png);
-    mask-image: url(../img/Formal/formal_sample.png);
-    background-color: #000000;
+
+  .optOccasion .btnOccasion{
+      margin: 1rem 0.5rem;
+      padding: 2rem auto;
   }
-  
-  .formalMask-container .mask-formal-inner{
-    -webkit-mask-image: url(../img/Formal/formal_inner_sample.png);
-    mask-image: url(../img/Formal/formal_inner_sample.png);
-    background-color: #ffffff;
+
+  .optOccasion .btnOccasion .icon{
+      width: 100px;
   }
-  
-  .formalMask-container .mask-formal-button{
-    -webkit-mask-image: url(../img/Formal/formal_button_sample.png);
-    mask-image: url(../img/Formal/formal_button_sample.png);
-    background-color: #000000;
+}
+
+/* MD */
+@media(min-width: 768px){
+  .garments-container{
+      border-radius: 0rem;
+      border-top-right-radius: 1.5rem;
+      border-bottom-right-radius: 1.5rem;
   }
-  
-  .formalMask-container .mask-formal-chalk-stripe{
-    -webkit-mask-image: url(../img/Formal/formal-chalk-stripe.png);
-    mask-image: url(../img/Formal/formal-chalk-stripe.png);
-    background-color: #ffffff;
-    filter: opacity(0.5);
+
+  .containers{
+      height: 390px;
   }
-  
-  .formalMask-container .mask-formal-windowpane{
-    -webkit-mask-image: url(../img/Formal/formal-windowpane.png);
-    mask-image: url(../img/Formal/formal-windowpane.png);
-    background-color: rgb(255, 255, 255);
-    filter: opacity(0.2);
+}
+
+/* LG */
+@media(min-width: 992px){
+  .garments-container{
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      width: 300px;
+      height: 610px;
+      align-items: center;
+      justify-content: center;
+      padding: 4px 0px 4px 4px;;
+      border: 3px solid #b1b1b1;
+      border-radius: 0rem;
+      border-top-right-radius: 1.5rem;
+      border-bottom-right-radius: 1.5rem;
+  } 
+
+  .garments-container .garments{
+      margin-left: 0px;;
+      width: 109px;
+      height: 600px;
   }
-  
-  .formal-sample{
-    filter: opacity(0.3) brightness(100%) contrast(80%);
+
+  .garments-container .garments .optGarment{
+      margin: auto;
+      height: 199px;
+      width: 110px;
   }
-  
-  .formal-inner{
-    filter: opacity(0.3) brightness(100%) contrast(120%);
+
+  .garments-container .garments .optGarment:first-child{
+      border-radius: 0rem;
+      border-top-right-radius: 1.5rem;
   }
-  
-  .formal-button{
-    filter: opacity(0.3) brightness(40%) contrast(80%);
+      
+  .garments-container .garments .optGarment:last-child{
+      border-radius: 0rem;
+      border-bottom-right-radius: 1.5rem;
   }
-  
-  .formal-mannequin{
-    margin-top: 5px;
+
+  .garments-container .garments .optGarment .icon{
+      width: 90px;
   }
-  
-  
-  
-  /* ==============================
-              Pants
-  =============================== */
-  
-  .pantsMask-container .mask-pants{
-    -webkit-mask-image: url(../img/Pants/pants-sample.png);
-    mask-image: url(../img/Pants/pants-sample.png);
-    background-color: #000000;
+
+  .tuxedoMask-container > :is(
+  .mask-tuxedo, 
+  .mask-tuxedo-inner, 
+  .mask-tuxedo-blazer, 
+  .mask-tuxedo-mannequin, 
+  .mask-tuxedo-chalk-stripe,
+  .mask-tuxedo-windowpane),
+  .corporateMask-container > :is(
+  .mask-corporate, 
+  .mask-corporate-inner, 
+  .mask-corporate-button, 
+  .mask-corporate-mannequin,
+  .mask-corporate-chalk-stripe,
+  .mask-corporate-windowpane),
+  .formalMask-container > :is(
+  .mask-formal, 
+  .mask-formal-inner, 
+  .mask-formal-button, 
+  .mask-formal-mannequin,
+  .mask-formal-chalk-stripe,
+  .mask-formal-windowpane),
+  .pantsMask-container > :is(
+  .mask-pants, 
+  .mask-pants-chalk-stripe,
+  .mask-pants-windowpane),
+  .necktieMask-container > :is(
+  .mask-necktie,
+  .mask-necktie-chalk-stripe,
+  .mask-necktie-windowpane),
+  .bowtieMask-container > :is(
+  .mask-bowtie){
+      -webkit-mask-size: 100%;
   }
-  
-  .pantsMask-container .mask-pants-chalk-stripe{
-    -webkit-mask-image: url(../img/Pants/pants-chalk-stripe.png);
-    mask-image: url(../img/Pants/pants-chalk-stripe.png);
-    background-color: #ffffff;
-    filter: opacity(0.5);
-  }
-  
-  .pantsMask-container .mask-pants-windowpane{
-    -webkit-mask-image: url(../img/Pants/pants-windowpane.png);
-    mask-image: url(../img/Pants/pants-windowpane.png);
-    background-color: rgb(255, 255, 255);
-    filter: opacity(0.2);
-  }
-  
-  
-  .pants-sample,
-  .pants-chalk-stripe,
-  .pants-windowpane{
-    filter: opacity(0.3) brightness(100%) contrast(80%);
-  }
-  
-  /* ==============================
-              Necktie
-  =============================== */
-  
-  .necktieMask-container .mask-necktie{
-    -webkit-mask-image: url(../img/Necktie/necktie-sample.png);
-    mask-image: url(../img/Necktie/necktie-sample.png);
-    background-color: #000000;
-  }
-  
-  .necktieMask-container .mask-necktie-chalk-stripe{
-    -webkit-mask-image: url(../img/Necktie/necktie-chalk-stripe.png);
-    mask-image: url(../img/Necktie/necktie-chalk-stripe.png);
-    background-color: #ffffff;
-    filter: opacity(0.5);
-  }
-  
-  .necktieMask-container .mask-necktie-windowpane{
-    -webkit-mask-image: url(../img/Necktie/necktie-windowpane.png);
-    mask-image: url(../img/Necktie/necktie-windowpane.png);
-    background-color: rgb(255, 255, 255);
-    filter: opacity(0.5);
-  }
-  
+
+  .tuxedo-sample, .tuxedo-blazer, .tuxedo-inner, .tuxedo-mannequin, .tuxedo-chalk-stripe, .tuxedo-windowpane,
+  .corporate-sample, .corporate-inner, .corporate-button, .corporate-mannequin, .corporate-chalk-stripe, .corporate-windowpane,
+  .formal-sample, .formal-inner, .formal-button, .formal-mannequin, .formal-chalk-stripe, .formal-windowpane,
+  .pants-sample, .pants-chalk-stripe, .pants-windowpane,
   .necktie-sample, .necktie-chalk-stripe, .necktie-windowpane,
   .bowtie-sample{
-    filter: opacity(0.3) brightness(100%) contrast(80%);
+      width: 100%;
   }
-  
-  
-  
-  /* ==============================
-              Bowtie
-  =============================== */
-  
-  .bowtieMask-container .mask-bowtie{
-    -webkit-mask-image: url(../img/Bowtie/bowtie-sample.png);
-    mask-image: url(../img/Bowtie/bowtie-sample.png);
-    background-color: #000000;
+
+  .opt{
+      margin: 2rem auto;
   }
-  
-  /* ==============================
-          Cloth Properties
-  =============================== */
-  .properties-container{
-    display: flex;
-    justify-content: center;
-  }
-  
-  .suit-properties, 
-  .pants-properties, 
-  .necktie-properties, 
-  .bowtie-properties{
-    /* height: 100%; */
-    /* height: 100vh; */
-    padding-top: 10px;
-  }
-  
-  
-  
-  /* ==============================
-              Options
-  =============================== */
-  .optOccasion-container{
-    background-color: #afafaf;
-    border-radius: 1rem;
-  }
-  
-  .optOccasion{
-    /* display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    justify-content: center; */
-    display: inline-flex;
-    justify-content: center;
-    /* margin: 1.5rem auto; */
-  }
-  
-  
-  
-  
+
   .optOccasion .btnOccasion{
-    border-radius: 1rem;
-    background-color: transparent;
-    box-shadow: 5px 5px 5px #0e0e0e;
+      margin: 2rem 0.5rem;
+      padding: 5rem auto;
   }
-  
-  .optOccasion .active{
-    background-color: #fefefe;
-    box-shadow: none;
-  }
-  
+
   .optOccasion .btnOccasion .icon{
-    filter: drop-shadow(0px 0px 1px #0e0e0e);
-  }
-  
-  .reviewBtn{
-    padding: 0.7rem 1.2rem;
-    border-radius: 1rem;
-  }
-  
-  
-  
-  /* ==============================
-              Color Table
-  =============================== */
-  .table-input{
-    font-size: 1rem;
-    font-weight: 600;
-  }
-  
-  .table .table-input{
-    text-align: center;
-  }
-  
-  .table .table-input .color-picker{
-    margin-right:.2em;
-    cursor: pointer;
-    width: 150px;
-    outline: none;
-    background: transparent;
-    border: transparent;
-  }
-  
-  /* ==============================
-              Review
-  =============================== */
-  .reviewContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    margin-top: 2rem;
-  }
-  
-  .review-title{
-    text-align: center;
-  }
-  
-  .reviewContainer .review-card{
-    margin: auto 0.5rem;
-    width: 450px;
-    height: 300px;
-    margin: 1rem;
-    padding: 1rem;
-    background-color: #fefefe;
-    box-shadow: 7px 7px 7px 7px #3f3f3f8a;
-  }
-  
-  .read-text{
-    outline: none;
-    border: none;
-    background-color: none;
-  }
-  
-  
-  /* ==============================
-            Form Buttons
-  =============================== */
-  .button-container{
-    display: flex;
-    justify-content: center;
-  }
-  
-  .button-container > :is(.returnBtn, .purchaseBtn), .reviewBtn{
-    margin: auto 0.5rem;
-    padding: 0.7rem 1.2rem;
-    border: 1px solid #fefefe;
-    border-radius: 1rem;
-    text-decoration: none;
-    color: #fefefe;
-    cursor: pointer;
-    box-shadow: 2px 2px 2px 2px #0e0e0e;
-  }
-  
-  .button-container .returnBtn, .reviewBtn{
-    background-color: #0e0e0e;
-  }
-  
-  .button-container .purchaseBtn{
-    background-color: #000c50;
+      width: 150px;
   }
 
-  .price-container{
-    background-color: #2222222a;
-    border-radius: 0.5rem;
-    padding: 1rem;
+  .containers{
+      height: 595px;
   }
-
-  .price-container .price-tag{
-    outline: none;
-    background-color: transparent;
-    border: transparent;
-    font-weight: 600;
-  }
-  
-  /* ==============================
-            Media Queries
-  =============================== */
-  
-  /* XS */
-  @media(min-width: 0px){
-    .customization{
-      margin-bottom: 29rem;
-    }
-
-    .garments-container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border-radius: 1.5rem;
-        border: 3px solid #b1b1b1;
-    } 
-  
-  
-    .garments-container .garments .optGarment{
-        margin: auto;
-        height: 150px;
-        width: 130px;
-    }
-    
-    .garments-container .garments .optGarment:first-child{
-        border-top-left-radius: 1.5rem;
-        border-bottom-left-radius: 1.5rem;
-        border-top-right-radius: 0rem;
-        border-bottom-right-radius: 0rem;
-    }
-        
-    .garments-container .garments .optGarment:last-child{
-        border-top-left-radius: 0rem;
-        border-bottom-left-radius: 0rem;
-        border-top-right-radius: 1.5rem;
-        border-bottom-right-radius: 1.5rem;
-    }
-  
-    .garments-container .garments .optGarment .icon{
-        width: 100px;
-    }
-  
-    .containers{
-        height: 541px;
-        align-self: baseline;
-    }
-  
-    .tuxedoMask-container > :is(
-    .mask-tuxedo, 
-    .mask-tuxedo-inner, 
-    .mask-tuxedo-blazer, 
-    .mask-tuxedo-mannequin, 
-    .mask-tuxedo-chalk-stripe,
-    .mask-tuxedo-windowpane),
-    .corporateMask-container > :is(
-    .mask-corporate, 
-    .mask-corporate-inner, 
-    .mask-corporate-button, 
-    .mask-corporate-mannequin,
-    .mask-corporate-chalk-stripe,
-    .mask-corporate-windowpane),
-    .formalMask-container > :is(
-    .mask-formal, 
-    .mask-formal-inner, 
-    .mask-formal-button, 
-    .mask-formal-mannequin,
-    .mask-formal-chalk-stripe,
-    .mask-formal-windowpane),
-    .pantsMask-container > :is(
-    .mask-pants, 
-    .mask-pants-chalk-stripe,
-    .mask-pants-windowpane),
-    .necktieMask-container > :is(
-    .mask-necktie,
-    .mask-necktie-chalk-stripe,
-    .mask-necktie-windowpane),
-    .bowtieMask-container > :is(
-    .mask-bowtie){
-        -webkit-mask-size: 100%;
-    }
-  
-    .tuxedo-sample, .tuxedo-blazer, .tuxedo-inner, .tuxedo-mannequin, .tuxedo-chalk-stripe, .tuxedo-windowpane,
-    .corporate-sample, .corporate-inner, .corporate-button, .corporate-mannequin, .corporate-chalk-stripe, .corporate-windowpane,
-    .formal-sample, .formal-inner, .formal-button, .formal-mannequin, .formal-chalk-stripe, .formal-windowpane,
-    .pants-sample, .pants-chalk-stripe, .pants-windowpane,
-    .necktie-sample, .necktie-chalk-stripe, .necktie-windowpane,
-    .bowtie-sample{
-        width: 100%;
-    }
-  
-    .properties-container{
-        padding: 5rem auto;
-    }
-  
-    .optOccasion .active{
-        background-color: #fefefe;
-        box-shadow: none;
-      }
-  
-    .optOccasion .btnOccasion{
-        margin: 2rem 0rem;
-        padding: 3rem auto;
-    }
-  
-    .optOccasion .btnOccasion .icon{
-        width: 135px;
-    }
+}
 
 
-  }
-  
-  /* SM */
-  @media(min-width: 576px){
-    .customization{
-      margin-bottom: 0rem;
-    }
 
-    .garments-container{
-        border-radius: 0rem;
-        border-top-right-radius: 1.5rem;
-        border-bottom-right-radius: 1.5rem;
-        /* margin-left: 40px; */
-    }
-  
-    .garments-container .garments{
-        margin-left: 45px;
-        width: 125px;
-        height: 450px;
-    }
-  
-    .garments-container .garments .optGarment{
-        margin: auto;
-        width: 80px;
-    }
-  
-    .garments-container .garments .optGarment .icon{
-        width: 60px;
-    }
-  
-    .containers{
-        height: 251px;
-        align-self: auto;
-    }
-  
-    .optOccasion .btnOccasion{
-        margin: 1rem 0.5rem;
-        padding: 2rem auto;
-    }
-  
-    .optOccasion .btnOccasion .icon{
-        width: 100px;
-    }
-  }
-  
-  /* MD */
-  @media(min-width: 768px){
-    .garments-container{
-        border-radius: 0rem;
-        border-top-right-radius: 1.5rem;
-        border-bottom-right-radius: 1.5rem;
-    }
-  
-    .containers{
-        height: 390px;
-    }
-  }
-  
-  /* LG */
-  @media(min-width: 992px){
-    .garments-container{
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        width: 300px;
-        height: 610px;
-        align-items: center;
-        justify-content: center;
-        padding: 4px 0px 4px 4px;;
-        border: 3px solid #b1b1b1;
-        border-radius: 0rem;
-        border-top-right-radius: 1.5rem;
-        border-bottom-right-radius: 1.5rem;
-    } 
-  
-    .garments-container .garments{
-        margin-left: 0px;;
-        width: 109px;
-        height: 600px;
-    }
-  
-    .garments-container .garments .optGarment{
-        margin: auto;
-        height: 199px;
-        width: 110px;
-    }
-  
-    .garments-container .garments .optGarment:first-child{
-        border-radius: 0rem;
-        border-top-right-radius: 1.5rem;
-    }
-        
-    .garments-container .garments .optGarment:last-child{
-        border-radius: 0rem;
-        border-bottom-right-radius: 1.5rem;
-    }
-  
-    .garments-container .garments .optGarment .icon{
-        width: 90px;
-    }
-  
-    .tuxedoMask-container > :is(
-    .mask-tuxedo, 
-    .mask-tuxedo-inner, 
-    .mask-tuxedo-blazer, 
-    .mask-tuxedo-mannequin, 
-    .mask-tuxedo-chalk-stripe,
-    .mask-tuxedo-windowpane),
-    .corporateMask-container > :is(
-    .mask-corporate, 
-    .mask-corporate-inner, 
-    .mask-corporate-button, 
-    .mask-corporate-mannequin,
-    .mask-corporate-chalk-stripe,
-    .mask-corporate-windowpane),
-    .formalMask-container > :is(
-    .mask-formal, 
-    .mask-formal-inner, 
-    .mask-formal-button, 
-    .mask-formal-mannequin,
-    .mask-formal-chalk-stripe,
-    .mask-formal-windowpane),
-    .pantsMask-container > :is(
-    .mask-pants, 
-    .mask-pants-chalk-stripe,
-    .mask-pants-windowpane),
-    .necktieMask-container > :is(
-    .mask-necktie,
-    .mask-necktie-chalk-stripe,
-    .mask-necktie-windowpane),
-    .bowtieMask-container > :is(
-    .mask-bowtie){
-        -webkit-mask-size: 100%;
-    }
-  
-    .tuxedo-sample, .tuxedo-blazer, .tuxedo-inner, .tuxedo-mannequin, .tuxedo-chalk-stripe, .tuxedo-windowpane,
-    .corporate-sample, .corporate-inner, .corporate-button, .corporate-mannequin, .corporate-chalk-stripe, .corporate-windowpane,
-    .formal-sample, .formal-inner, .formal-button, .formal-mannequin, .formal-chalk-stripe, .formal-windowpane,
-    .pants-sample, .pants-chalk-stripe, .pants-windowpane,
-    .necktie-sample, .necktie-chalk-stripe, .necktie-windowpane,
-    .bowtie-sample{
-        width: 100%;
-    }
-  
-    .opt{
-        margin: 2rem auto;
-    }
-  
-    .optOccasion .btnOccasion{
-        margin: 2rem 0.5rem;
-        padding: 5rem auto;
-    }
-  
-    .optOccasion .btnOccasion .icon{
-        width: 150px;
-    }
-  
-    .containers{
-        height: 595px;
-    }
-  }
-  
-  
-  
-  
